@@ -1,0 +1,16 @@
+{
+  "name": "getadminsofsteamgroup",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Preport",
+  "license": "MIT",
+  "dependencies": {
+    "jsdom": "^16.5.3",
+    "request": "^2.88.2",
+    "steamid": "^1.1.3"
+  }
+}
