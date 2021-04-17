@@ -69,7 +69,7 @@ function getMembers(groupID, groupRank, steamAPIKey, callback, cookies) {
                 function getVan() {
                     getVanityUrl(member, steamAPIKey, function (err, stid64) {
                         if (err) {
-                            if (err.message != "HTTP error 429") return callback(err);
+                            if (!err.includes("429")) return callback(err);
                             else return setTimeout(getVan, 20000);
                         }
                         members[i] = new SteamID(stid64);
