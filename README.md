@@ -1,4 +1,5 @@
 # Get Admins Of Steam Group
+### <p align="center">[![Build Status](https://travis-ci.com/Preport/getAdminsOfSteamGroup.svg?branch=main)](https://travis-ci.com/Preport/getAdminsOfSteamGroup)</p>
 ## Usage Example
 ```javascript
 const getAdminsOfSteamGroup = require('getAdminsOfSteamGroup');
