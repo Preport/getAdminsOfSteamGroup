@@ -66,11 +66,17 @@ function getMembers(groupID, groupRank, steamAPIKey, callback, cookies) {
         }
         members.forEach(function (member, i) {
             if (typeof member == "string") {
-                getVanityUrl(member, steamAPIKey, function (err, stid64) {
-                    if (err) return callback(err);
-                    members[i] = new SteamID(stid64);
-                    resolve();
-                })
+                function getVan() {
+                    getVanityUrl(member, steamAPIKey, function (err, stid64) {
+                        if (err) {
+                            if (err.message != "HTTP error 429") return callback(err);
+                            else return setTimeout(getVan, 20000);
+                        }
+                        members[i] = new SteamID(stid64);
+                        resolve();
+                    })
+                }
+                getVan()
             }
         })
     }
