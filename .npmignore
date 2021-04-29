@@ -1,0 +1,6 @@
+.github
+dist/test*
+source
+.gitattributes
+.travis.yml
+tsconfig.json
