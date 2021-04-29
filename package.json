@@ -20,7 +20,8 @@
     "steamgroups"
   ],
   "devDependencies": {
-    "@types/cuint": "^0.2.1"
+    "@types/cuint": "^0.2.1",
+    "typescript": "^4.2.4"
   },
   "repository": {
     "type": "git",
