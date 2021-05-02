@@ -39,6 +39,7 @@ async function getMembers(groupID: string | number, groupRank: EGroupRank, cooki
         if (groupRank != 1) addToArray(admins, true);
         if (!!groupRank) addToArray(mods);
         if ((admins.length + mods.length < 51) || (admins.length == 0 && !groupRank) || (admins.length == 0 && mods.length == 0)) break;
+        page++;
     }
     return members
 }
