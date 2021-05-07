@@ -1,5 +1,5 @@
 import got from 'got'
-import cheerio from 'cheerio'
+import cheerio, { Cheerio, Element } from 'cheerio'
 import cuint from 'cuint'
 
 enum EGroupRank {
@@ -22,7 +22,7 @@ async function getMembers(groupID: string | number, groupRank: EGroupRank, cooki
                 cookies: cookies,
             }
         })
-        function addToArray(root: cheerio.Cheerio, owner?: boolean) {
+        function addToArray(root: Cheerio<Element>, owner?: boolean) {
             const profiles = root.parent();
             profiles.each((i, e) => {
                 members.push({
