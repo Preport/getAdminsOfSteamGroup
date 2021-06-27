@@ -1,6 +1,6 @@
 {
   "name": "getadminsofsteamgroup",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Used to get Admins/Moderators SteamID's of a steamgroup",
   "main": "dist/index.js",
   "scripts": {
